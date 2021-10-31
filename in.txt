@@ -4,4 +4,14 @@ pipisig
 pixxxx
 "testidentifierAA"'testtext''1''1.1'
 pisig*/rhojoinasaggmaxmin-cupcap!andor(),_intstrfloat<==>
-maxd
+max
+'0.1'
+'0.01'
+'0.001'
+'0.10'
+'1.0'
+'1.01'
+'1.001'
+'10.0'
+'10.1'
+'10.10'

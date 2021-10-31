@@ -4,4 +4,14 @@ pi pi sig
 Lexical error.
 identifier<testidentifierAA> text_literal<testtext> int_literal<1> float_literal<1.1>
 pi sig * / rho join as agg max min - cup cap ! and or ( ) , _ int str float < == >
+max
+float_literal<0.1>
+float_literal<0.01>
+float_literal<0.001>
+Lexical error.
+float_literal<1.0>
+float_literal<1.01>
+float_literal<1.001>
+float_literal<10.0>
+float_literal<10.1>
 Lexical error.
