@@ -1,0 +1,7 @@
+pi _ identifier<name> ( identifier<students> )
+sig _ ( identifier<name> == text_literal<David> ) ( identifier<students> )
+pi pi sig
+Lexical error.
+identifier<testidentifierAA> text_literal<testtext> int_literal<1> float_literal<1.1>
+pi sig * / rho join as agg max min - cup cap ! and or ( ) , _ int str float < == >
+Lexical error.

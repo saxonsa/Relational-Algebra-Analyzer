@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/analyzer.c
+stdio.h
+-
+string.h
+-
+stdbool.h
+-
+lexer.h
+C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/lexer.h
+
+C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/lexer.h
+
