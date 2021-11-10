@@ -11,7 +11,15 @@ stdio.h
 -
 string.h
 -
-stdbool.h
+lexer.h
+C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/lexer.h
+
+C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/lexer.c
+stdio.h
+-
+string.h
+-
+stdlib.h
 -
 lexer.h
 C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/lexer.h

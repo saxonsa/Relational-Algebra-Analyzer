@@ -370,9 +370,9 @@ char *next_token(char **p) {
                     new_token[i] = token[1 + i];
                 }
 
-                // concat result text_literal<token>
-                char *result = (char *) calloc(strlen("text_literal<>") + 1 + (*p - buf - 1), sizeof(char));
-                strcpy_s(result, strlen("text_literal<") + 1, "text_literal<");
+                // concat result text_literial<token>
+                char *result = (char *) calloc(strlen("text_literial<>") + 1 + (*p - buf - 1), sizeof(char));
+                strcpy_s(result, strlen("text_literial<") + 1, "text_literial<");
                 strcat_s(result, strlen(new_token) + 1 + strlen(result), new_token);
                 strcat_s(result, strlen(">") + 1 + strlen(result), ">");
 
@@ -388,9 +388,9 @@ char *next_token(char **p) {
                     new_token[i] = token[1 + i];
                 }
 
-                // concat result int_literal<token>
-                char *result = (char *) calloc(strlen("int_literal<>") + 1 + (*p - buf - 1), sizeof(char));
-                strcpy_s(result, strlen("int_literal<") + 1, "int_literal<");
+                // concat result int_literial<token>
+                char *result = (char *) calloc(strlen("int_literial<>") + 1 + (*p - buf - 1), sizeof(char));
+                strcpy_s(result, strlen("int_literial<") + 1, "int_literial<");
                 strcat_s(result, strlen(new_token) + 1 + strlen(result), new_token);
                 strcat_s(result, strlen(">") + 1 + strlen(result), ">");
 
@@ -406,9 +406,9 @@ char *next_token(char **p) {
                     new_token[i] = token[1 + i];
                 }
 
-                // concat result float_literal<token>
-                char *result = (char *) calloc(strlen("float_literal<>") + 1 + (*p - buf - 1), sizeof(char));
-                strcpy_s(result, strlen("float_literal<") + 1, "float_literal<");
+                // concat result float_literial<token>
+                char *result = (char *) calloc(strlen("float_literial<>") + 1 + (*p - buf - 1), sizeof(char));
+                strcpy_s(result, strlen("float_literial<") + 1, "float_literial<");
                 strcat_s(result, strlen(new_token) + 1 + strlen(result), new_token);
                 strcat_s(result, strlen(">") + 1 + strlen(result), ">");
 
