@@ -9,7 +9,6 @@
 
 #include <stdio.h>
 #include <string.h>
-#include <stdbool.h>
 #include "lexer.h"
 
 #define MAXSIZE 1024 // max size for one line
@@ -35,7 +34,7 @@ int main() {
 
     // processing the lexical analysis
     while (!feof(in)) {
-        bool error = false;
+        int error = 0;
 
         // read one line from "in.txt"
         fgets(buf, MAXSIZE, in);
@@ -61,7 +60,7 @@ int main() {
 
             } else {
                 // error
-                error = true;
+                error = 1;
                 break;
             }
         }
