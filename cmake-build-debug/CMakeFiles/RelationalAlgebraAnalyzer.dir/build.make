@@ -93,19 +93,40 @@ CMakeFiles\RelationalAlgebraAnalyzer.dir\lexer.c.s: cmake_force
  /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\RelationalAlgebraAnalyzer.dir\lexer.c.s /c C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\lexer.c
 <<
 
+CMakeFiles\RelationalAlgebraAnalyzer.dir\SLR.c.obj: CMakeFiles\RelationalAlgebraAnalyzer.dir\flags.make
+CMakeFiles\RelationalAlgebraAnalyzer.dir\SLR.c.obj: ..\SLR.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/RelationalAlgebraAnalyzer.dir/SLR.c.obj"
+	C:\PROGRA~2\MIB055~1\2019\COMMUN~1\VC\Tools\MSVC\1429~1.300\bin\Hostx86\x86\cl.exe @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\RelationalAlgebraAnalyzer.dir\SLR.c.obj /FdCMakeFiles\RelationalAlgebraAnalyzer.dir\ /FS -c C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\SLR.c
+<<
+
+CMakeFiles\RelationalAlgebraAnalyzer.dir\SLR.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RelationalAlgebraAnalyzer.dir/SLR.c.i"
+	C:\PROGRA~2\MIB055~1\2019\COMMUN~1\VC\Tools\MSVC\1429~1.300\bin\Hostx86\x86\cl.exe > CMakeFiles\RelationalAlgebraAnalyzer.dir\SLR.c.i @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\SLR.c
+<<
+
+CMakeFiles\RelationalAlgebraAnalyzer.dir\SLR.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RelationalAlgebraAnalyzer.dir/SLR.c.s"
+	C:\PROGRA~2\MIB055~1\2019\COMMUN~1\VC\Tools\MSVC\1429~1.300\bin\Hostx86\x86\cl.exe @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\RelationalAlgebraAnalyzer.dir\SLR.c.s /c C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\SLR.c
+<<
+
 # Object files for target RelationalAlgebraAnalyzer
 RelationalAlgebraAnalyzer_OBJECTS = \
 "CMakeFiles\RelationalAlgebraAnalyzer.dir\analyzer.c.obj" \
-"CMakeFiles\RelationalAlgebraAnalyzer.dir\lexer.c.obj"
+"CMakeFiles\RelationalAlgebraAnalyzer.dir\lexer.c.obj" \
+"CMakeFiles\RelationalAlgebraAnalyzer.dir\SLR.c.obj"
 
 # External object files for target RelationalAlgebraAnalyzer
 RelationalAlgebraAnalyzer_EXTERNAL_OBJECTS =
 
 RelationalAlgebraAnalyzer.exe: CMakeFiles\RelationalAlgebraAnalyzer.dir\analyzer.c.obj
 RelationalAlgebraAnalyzer.exe: CMakeFiles\RelationalAlgebraAnalyzer.dir\lexer.c.obj
+RelationalAlgebraAnalyzer.exe: CMakeFiles\RelationalAlgebraAnalyzer.dir\SLR.c.obj
 RelationalAlgebraAnalyzer.exe: CMakeFiles\RelationalAlgebraAnalyzer.dir\build.make
 RelationalAlgebraAnalyzer.exe: CMakeFiles\RelationalAlgebraAnalyzer.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable RelationalAlgebraAnalyzer.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable RelationalAlgebraAnalyzer.exe"
 	"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\RelationalAlgebraAnalyzer.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\mt.exe --manifests -- C:\PROGRA~2\MIB055~1\2019\COMMUN~1\VC\Tools\MSVC\1429~1.300\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\RelationalAlgebraAnalyzer.dir\objects1.rsp @<<
  /out:RelationalAlgebraAnalyzer.exe /implib:RelationalAlgebraAnalyzer.lib /pdb:C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\cmake-build-debug\RelationalAlgebraAnalyzer.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

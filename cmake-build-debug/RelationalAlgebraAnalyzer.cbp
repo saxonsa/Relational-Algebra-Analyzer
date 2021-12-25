@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/SLR.c">
+			<Option target="RelationalAlgebraAnalyzer"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/SLR.h">
+			<Option target="RelationalAlgebraAnalyzer"/>
+		</Unit>
 		<Unit filename="C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/analyzer.c">
 			<Option target="RelationalAlgebraAnalyzer"/>
 		</Unit>

@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/SLR.c" "C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/cmake-build-debug/CMakeFiles/RelationalAlgebraAnalyzer.dir/SLR.c.obj"
   "C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/analyzer.c" "C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/cmake-build-debug/CMakeFiles/RelationalAlgebraAnalyzer.dir/analyzer.c.obj"
   "C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/lexer.c" "C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/cmake-build-debug/CMakeFiles/RelationalAlgebraAnalyzer.dir/lexer.c.obj"
   )

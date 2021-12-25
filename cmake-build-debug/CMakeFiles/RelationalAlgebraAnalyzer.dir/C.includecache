@@ -6,12 +6,12 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/analyzer.c
+C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/lexer.c
 stdio.h
 -
 string.h
 -
-stdbool.h
+stdlib.h
 -
 lexer.h
 C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/lexer.h
