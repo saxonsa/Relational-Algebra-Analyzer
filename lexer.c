@@ -34,31 +34,37 @@ const int transition_table[21][34] = {
         {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 18, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1},
         {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 19, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1},
         {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 4, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1},
-        {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 5, -1, -1, -1, -1, -1, -1, -1, -1}
-};
+        {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 5, -1, -1, -1, -1, -1, -1, -1, -1} };
 
-char *next_token(char **p) {
+char* next_token(char** p)
+{
     // save a copy version of input string for p
-    const char *buf = *p;
+    const char* buf = *p;
 
     // Denote current state, the initial state of DFA is 0
     int current_state = 0;
 
-    while (**p != '\n' && **p != 0 && current_state != -1 && (current_state == 0 || current_state > 9)) {
-        switch (**p) {
-            case '\"': {
+    while (**p != '\n' && **p != 0 && current_state != -1 && (current_state == 0 || current_state > 9))
+    {
+        switch (**p)
+        {
+            case '\"':
+            {
                 current_state = transition_table[current_state][0];
                 break;
             }
-            case '\'': {
+            case '\'':
+            {
                 current_state = transition_table[current_state][1];
                 break;
             }
-            case '(': {
+            case '(':
+            {
                 current_state = transition_table[current_state][2];
                 break;
             }
-            case ')': {
+            case ')':
+            {
                 current_state = transition_table[current_state][3];
                 break;
             }
@@ -71,11 +77,13 @@ char *next_token(char **p) {
             case '6':
             case '7':
             case '8':
-            case '9': {
+            case '9':
+            {
                 current_state = transition_table[current_state][4];
                 break;
             }
-            case '<': {
+            case '<':
+            {
                 current_state = transition_table[current_state][5];
                 break;
             }
@@ -104,119 +112,148 @@ char *next_token(char **p) {
             case 'W':
             case 'X':
             case 'Y':
-            case 'Z': {
+            case 'Z':
+            {
                 current_state = transition_table[current_state][6];
                 break;
             }
-            case '_': {
+            case '_':
+            {
                 current_state = transition_table[current_state][7];
                 break;
             }
-            case 'a': {
+            case 'a':
+            {
                 current_state = transition_table[current_state][8];
                 break;
             }
-            case 'b': {
+            case 'b':
+            {
                 current_state = transition_table[current_state][9];
                 break;
             }
-            case 'c': {
+            case 'c':
+            {
                 current_state = transition_table[current_state][10];
                 break;
             }
-            case 'd': {
+            case 'd':
+            {
                 current_state = transition_table[current_state][11];
                 break;
             }
-            case 'e': {
+            case 'e':
+            {
                 current_state = transition_table[current_state][12];
                 break;
             }
-            case 'f': {
+            case 'f':
+            {
                 current_state = transition_table[current_state][13];
                 break;
             }
-            case 'g': {
+            case 'g':
+            {
                 current_state = transition_table[current_state][14];
                 break;
             }
-            case 'h': {
+            case 'h':
+            {
                 current_state = transition_table[current_state][15];
                 break;
             }
-            case 'i': {
+            case 'i':
+            {
                 current_state = transition_table[current_state][16];
                 break;
             }
-            case 'j': {
+            case 'j':
+            {
                 current_state = transition_table[current_state][17];
                 break;
             }
-            case 'k': {
+            case 'k':
+            {
                 current_state = transition_table[current_state][18];
                 break;
             }
-            case 'l': {
+            case 'l':
+            {
                 current_state = transition_table[current_state][19];
                 break;
             }
-            case 'm': {
+            case 'm':
+            {
                 current_state = transition_table[current_state][20];
                 break;
             }
-            case 'n': {
+            case 'n':
+            {
                 current_state = transition_table[current_state][21];
                 break;
             }
-            case 'o': {
+            case 'o':
+            {
                 current_state = transition_table[current_state][22];
                 break;
             }
-            case 'p': {
+            case 'p':
+            {
                 current_state = transition_table[current_state][23];
                 break;
             }
-            case 'q': {
+            case 'q':
+            {
                 current_state = transition_table[current_state][24];
                 break;
             }
-            case 'r': {
+            case 'r':
+            {
                 current_state = transition_table[current_state][25];
                 break;
             }
-            case 's': {
+            case 's':
+            {
                 current_state = transition_table[current_state][26];
                 break;
             }
-            case 't': {
+            case 't':
+            {
                 current_state = transition_table[current_state][27];
                 break;
             }
-            case 'u': {
+            case 'u':
+            {
                 current_state = transition_table[current_state][28];
                 break;
             }
-            case 'v': {
+            case 'v':
+            {
                 current_state = transition_table[current_state][29];
                 break;
             }
-            case 'w': {
+            case 'w':
+            {
                 current_state = transition_table[current_state][30];
                 break;
             }
-            case 'x': {
+            case 'x':
+            {
                 current_state = transition_table[current_state][31];
                 break;
             }
-            case 'y': {
+            case 'y':
+            {
                 current_state = transition_table[current_state][32];
                 break;
             }
-            case 'z': {
+            case 'z':
+            {
                 current_state = transition_table[current_state][33];
                 break;
             }
-            default: {
+            default:
+            {
                 // current input symbol does not exist in alphabet
                 current_state = -1;
                 break;
@@ -226,28 +263,35 @@ char *next_token(char **p) {
         (*p)++;
     }
 
-    if (current_state == -1 || current_state > 9) {
+    if (current_state == -1 || current_state > 9)
+    {
         return ERROR_FLAG;
-    } else {
+    }
+    else
+    {
         // resolved token
-        char *token = (char *) malloc(sizeof(char) * (*p - buf + 1));
+        char* token = (char*)malloc(sizeof(char) * (*p - buf + 1));
         memset(token, '\0', sizeof(char) * (*p - buf + 1));
-        for (int i = 0; i < (*p - buf); i++) {
+        for (int i = 0; i < (*p - buf); i++)
+        {
             token[i] = buf[0 + i];
         }
 
         // Format returned result
-        switch (current_state) {
-            case 1: {
+        switch (current_state)
+        {
+            case 1:
+            {
                 // eliminate ""
-                char *new_token = (char *) malloc(sizeof(char) * (*p - buf - 1));
+                char* new_token = (char*)malloc(sizeof(char) * (*p - buf - 1));
                 memset(new_token, '\0', sizeof(char) * (*p - buf - 1));
-                for (int i = 0; i < (*p - buf - 2); i++) {
+                for (int i = 0; i < (*p - buf - 2); i++)
+                {
                     new_token[i] = token[1 + i];
                 }
 
                 // concat result identifier<token>
-                char *result = (char *) calloc(strlen("identifier<>") + 1 + (*p - buf - 1), sizeof(char));
+                char* result = (char*)calloc(strlen("identifier<>") + 1 + (*p - buf - 1), sizeof(char));
                 strcpy_s(result, strlen("identifier<") + 1, "identifier<");
                 strcat_s(result, strlen(new_token) + 1 + strlen(result), new_token);
                 strcat_s(result, strlen(">") + 1 + strlen(result), ">");
@@ -256,16 +300,18 @@ char *next_token(char **p) {
                 free(new_token);
                 return result;
             }
-            case 2: {
+            case 2:
+            {
                 // eliminate ''
-                char *new_token = (char *) malloc(sizeof(char) * (*p - buf - 1));
+                char* new_token = (char*)malloc(sizeof(char) * (*p - buf - 1));
                 memset(new_token, '\0', sizeof(char) * (*p - buf - 1));
-                for (int i = 0; i < (*p - buf - 2); i++) {
+                for (int i = 0; i < (*p - buf - 2); i++)
+                {
                     new_token[i] = token[1 + i];
                 }
 
                 // concat result text_literial<token>
-                char *result = (char *) calloc(strlen("text_literial<>") + 1 + (*p - buf - 1), sizeof(char));
+                char* result = (char*)calloc(strlen("text_literial<>") + 1 + (*p - buf - 1), sizeof(char));
                 strcpy_s(result, strlen("text_literial<") + 1, "text_literial<");
                 strcat_s(result, strlen(new_token) + 1 + strlen(result), new_token);
                 strcat_s(result, strlen(">") + 1 + strlen(result), ">");
@@ -274,7 +320,8 @@ char *next_token(char **p) {
                 free(new_token);
                 return result;
             }
-            default: {
+            default:
+            {
                 return token;
             }
         }

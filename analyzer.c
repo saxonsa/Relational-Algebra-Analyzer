@@ -15,9 +15,9 @@
 
 int main() {
     char ERROR_FLAG[] = "Lexical error.";
-    FILE *in, *out;
+    FILE* in, * out;
 
-    char buf[MAXSIZE] = {0};
+    char buf[MAXSIZE] = { 0 };
 
     // read stream from "in.txt"
     errno_t err = fopen_s(&in, "../in.txt", "r");
@@ -41,42 +41,40 @@ int main() {
 
         // init a pointer points the first unprocessed symbol of current line
         // initially, points to the first symbol of current line
-        char *p = buf;
+        char* p = buf;
 
-        char result[MAXSIZE] = {""};
+        char result[MAXSIZE] = { "" };
 
         while (*p != '\n' && *p != '\0') { // stop when meet line ends or file ends
+            char* token = next_token(&p);
+            if (strcmp(token, ERROR_FLAG) != 0) {
+                if (strlen(result) == 0) {
+                    strcpy_s(result, strlen(token) + 1, token);
+                }
+                else {
+                    // if not the first token, add an extra space before the next read token
+                    strcat_s(result, strlen(result) + 1 + strlen(" "), " ");
 
-            // fetch next token
-            char *token = next_token(&p);
+                    // concat the token name into the whole transformed result
+                    strcat_s(result, strlen(result) + 1 + strlen(token), token);
+                }
 
-            //
-
-//            if (strcmp(token, ERROR_FLAG) != 0) {
-//                if (strlen(result) == 0) {
-//                    strcpy_s(result, strlen(token) + 1, token);
-//                } else {
-//                    // if not the first token, add an extra space before the next read token
-//                    strcat_s(result, strlen(result) + 1 + strlen(" "), " ");
-//
-//                    // concat the token name into the whole transformed result
-//                    strcat_s(result, strlen(result) + 1 + strlen(token), token);
-//                }
-//
-//            } else {
-//                // error
-//                error = 1;
-//                break;
-//            }
+            }
+            else {
+                // error
+                error = 1;
+                break;
+            }
         }
 
-//        if (!error) {
-//            // output the transformed token name for the whole expression to "out.txt"
-//            fputs(result, out);
-//        } else {
-//            // if meet lexical error, just output the lexical error for the whole expression
-//            fputs(ERROR_FLAG, out);
-//        }
+        if (!error) {
+            // output the transformed token name for the whole expression to "out.txt"
+            fputs(result, out);
+        }
+        else {
+            // if meet lexical error, just output the lexical error for the whole expression
+            fputs(ERROR_FLAG, out);
+        }
 
         // output a '\n' to out.txt after each line except the last line
         if (*p != '\0') {
