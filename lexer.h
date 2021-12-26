@@ -17,5 +17,4 @@
 
 char* next_token(char** p);
 
-
 #endif //RAA_LEXER_H

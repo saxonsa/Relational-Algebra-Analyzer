@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "lexer.h"
+#include "SLR.h"
 
 #define MAXSIZE 1024 // max size for one line
 

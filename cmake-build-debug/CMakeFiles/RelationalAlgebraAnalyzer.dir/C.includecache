@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/SLR.h
+
 C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/analyzer.c
 stdio.h
 -
@@ -13,16 +15,8 @@ string.h
 -
 lexer.h
 C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/lexer.h
-
-C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/lexer.c
-stdio.h
--
-string.h
--
-stdlib.h
--
-lexer.h
-C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/lexer.h
+SLR.h
+C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/SLR.h
 
 C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/lexer.h
 

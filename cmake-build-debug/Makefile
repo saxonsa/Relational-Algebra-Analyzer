@@ -118,30 +118,6 @@ RelationalAlgebraAnalyzer\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\RelationalAlgebraAnalyzer.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\RelationalAlgebraAnalyzer.dir\build
 .PHONY : RelationalAlgebraAnalyzer\fast
 
-SLR.obj: SLR.c.obj
-.PHONY : SLR.obj
-
-# target to build an object file
-SLR.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\RelationalAlgebraAnalyzer.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\RelationalAlgebraAnalyzer.dir\SLR.c.obj
-.PHONY : SLR.c.obj
-
-SLR.i: SLR.c.i
-.PHONY : SLR.i
-
-# target to preprocess a source file
-SLR.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\RelationalAlgebraAnalyzer.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\RelationalAlgebraAnalyzer.dir\SLR.c.i
-.PHONY : SLR.c.i
-
-SLR.s: SLR.c.s
-.PHONY : SLR.s
-
-# target to generate assembly for a file
-SLR.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\RelationalAlgebraAnalyzer.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\RelationalAlgebraAnalyzer.dir\SLR.c.s
-.PHONY : SLR.c.s
-
 analyzer.obj: analyzer.c.obj
 .PHONY : analyzer.obj
 
@@ -199,9 +175,6 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... RelationalAlgebraAnalyzer
-	@echo ... SLR.obj
-	@echo ... SLR.i
-	@echo ... SLR.s
 	@echo ... analyzer.obj
 	@echo ... analyzer.i
 	@echo ... analyzer.s
