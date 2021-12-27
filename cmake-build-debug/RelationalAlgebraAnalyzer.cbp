@@ -94,6 +94,12 @@
 		<Unit filename="C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/lexer.h">
 			<Option target="RelationalAlgebraAnalyzer"/>
 		</Unit>
+		<Unit filename="C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/rule.c">
+			<Option target="RelationalAlgebraAnalyzer"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/rule.h">
+			<Option target="RelationalAlgebraAnalyzer"/>
+		</Unit>
 		<Unit filename="C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

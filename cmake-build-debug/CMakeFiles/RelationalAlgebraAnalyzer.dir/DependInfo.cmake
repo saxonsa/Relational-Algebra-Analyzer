@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/analyzer.c" "C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/cmake-build-debug/CMakeFiles/RelationalAlgebraAnalyzer.dir/analyzer.c.obj"
   "C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/lexer.c" "C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/cmake-build-debug/CMakeFiles/RelationalAlgebraAnalyzer.dir/lexer.c.obj"
+  "C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/rule.c" "C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/cmake-build-debug/CMakeFiles/RelationalAlgebraAnalyzer.dir/rule.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "MSVC")
 

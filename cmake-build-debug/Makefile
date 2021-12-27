@@ -166,6 +166,30 @@ lexer.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\RelationalAlgebraAnalyzer.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\RelationalAlgebraAnalyzer.dir\lexer.c.s
 .PHONY : lexer.c.s
 
+rule.obj: rule.c.obj
+.PHONY : rule.obj
+
+# target to build an object file
+rule.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RelationalAlgebraAnalyzer.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\RelationalAlgebraAnalyzer.dir\rule.c.obj
+.PHONY : rule.c.obj
+
+rule.i: rule.c.i
+.PHONY : rule.i
+
+# target to preprocess a source file
+rule.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RelationalAlgebraAnalyzer.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\RelationalAlgebraAnalyzer.dir\rule.c.i
+.PHONY : rule.c.i
+
+rule.s: rule.c.s
+.PHONY : rule.s
+
+# target to generate assembly for a file
+rule.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RelationalAlgebraAnalyzer.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\RelationalAlgebraAnalyzer.dir\rule.c.s
+.PHONY : rule.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -181,6 +205,9 @@ help:
 	@echo ... lexer.obj
 	@echo ... lexer.i
 	@echo ... lexer.s
+	@echo ... rule.obj
+	@echo ... rule.i
+	@echo ... rule.s
 .PHONY : help
 
 

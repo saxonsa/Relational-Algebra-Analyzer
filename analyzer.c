@@ -59,7 +59,6 @@ int main() {
                     // concat the token name into the whole transformed result
                     strcat_s(result, strlen(result) + 1 + strlen(token), token);
                 }
-
             }
             else {
                 // error
