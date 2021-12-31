@@ -82,6 +82,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/SLR.c">
+			<Option target="RelationalAlgebraAnalyzer"/>
+		</Unit>
 		<Unit filename="C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/SLR.h">
 			<Option target="RelationalAlgebraAnalyzer"/>
 		</Unit>
@@ -98,6 +101,12 @@
 			<Option target="RelationalAlgebraAnalyzer"/>
 		</Unit>
 		<Unit filename="C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/rule.h">
+			<Option target="RelationalAlgebraAnalyzer"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/state.c">
+			<Option target="RelationalAlgebraAnalyzer"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/state.h">
 			<Option target="RelationalAlgebraAnalyzer"/>
 		</Unit>
 		<Unit filename="C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/CMakeLists.txt">

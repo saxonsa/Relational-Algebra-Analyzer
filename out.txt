@@ -1,3 +1,2 @@
-Lexical error.
-sig _ text_literial<Goliath>
-Lexical error.
+
+

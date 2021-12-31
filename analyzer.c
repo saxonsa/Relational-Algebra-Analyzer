@@ -9,8 +9,11 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include "lexer.h"
 #include "SLR.h"
+#include "rule.h"
+#include "state.h"
 
 #define MAXSIZE 1024 // max size for one line
 
@@ -33,9 +36,12 @@ int main() {
         printf("error with code: %d, %s\n", err, strerror(err));
     }
 
+    // initialize production rule
+    Rule *rule = InitProductionRule();
+
     // processing the lexical analysis
     while (!feof(in)) {
-        int error = 0;
+//        int error = 0;
 
         // read one line from "in.txt"
         fgets(buf, MAXSIZE, in);
@@ -44,37 +50,73 @@ int main() {
         // initially, points to the first symbol of current line
         char* p = buf;
 
-        char result[MAXSIZE] = { "" };
+//        char result[MAXSIZE] = { "" };
+
+        // initialize current state, start with 0 ..... <0..   >
+        int currentState = 0;
+        StateStack stack;
+        CreateStack(&stack, 20);
+        Push(&stack, NULL, 0);
 
         while (*p != '\n' && *p != '\0') { // stop when meet line ends or file ends
+            currentState = stack.pairs[stack.top].state;
             char* token = next_token(&p);
-            if (strcmp(token, ERROR_FLAG) != 0) {
-                if (strlen(result) == 0) {
-                    strcpy_s(result, strlen(token) + 1, token);
-                }
-                else {
-                    // if not the first token, add an extra space before the next read token
-                    strcat_s(result, strlen(result) + 1 + strlen(" "), " ");
-
-                    // concat the token name into the whole transformed result
-                    strcat_s(result, strlen(result) + 1 + strlen(token), token);
-                }
+            int index = ConvertTokenToIndex(token);
+            char *act = (char*) malloc(sizeof(char) * 5);
+            strcpy_s(act, strlen(ACTION[currentState][index]) + 1, ACTION[currentState][index]);
+            if (strncmp(act, "s", 1) == 0) {
+                // shift
+                printf("shift");
+            }
+            else if (strncmp(act, "r", 1) == 0) {
+                // reduce
             }
             else {
-                // error
-                error = 1;
-                break;
+                // accept
             }
+
+
+
+            free(act);
+            // currentState = stack->top.state
+            // act = Action [currentState, token]
+            // if act.op == 's' continue;
+
+            // if act.op == 'r'
+            // stack.pop | rule
+            // GOTO[]
+
+            // if act.op == 'a'
+            // accept
+
+//
+//            if (strcmp(token, ERROR_FLAG) != 0) {
+//                if (strlen(result) == 0) {
+//                    strcpy_s(result, strlen(token) + 1, token);
+//                }
+//                else {
+//                    // if not the first token, add an extra space before the next read token
+//                    strcat_s(result, strlen(result) + 1 + strlen(" "), " ");
+//
+//                    // concat the token name into the whole transformed result
+//                    strcat_s(result, strlen(result) + 1 + strlen(token), token);
+//                }
+//            }
+//            else {
+//                // error
+//                error = 1;
+//                break;
+//            }
         }
 
-        if (!error) {
-            // output the transformed token name for the whole expression to "out.txt"
-            fputs(result, out);
-        }
-        else {
-            // if meet lexical error, just output the lexical error for the whole expression
-            fputs(ERROR_FLAG, out);
-        }
+//        if (!error) {
+//            // output the transformed token name for the whole expression to "out.txt"
+//            fputs(result, out);
+//        }
+//        else {
+//            // if meet lexical error, just output the lexical error for the whole expression
+//            fputs(ERROR_FLAG, out);
+//        }
 
         // output a '\n' to out.txt after each line except the last line
         if (*p != '\0') {

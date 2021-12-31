@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/RelationalAlgebraAnalyzer.dir/SLR.c.obj"
   "CMakeFiles/RelationalAlgebraAnalyzer.dir/analyzer.c.obj"
   "CMakeFiles/RelationalAlgebraAnalyzer.dir/lexer.c.obj"
   "CMakeFiles/RelationalAlgebraAnalyzer.dir/rule.c.obj"
+  "CMakeFiles/RelationalAlgebraAnalyzer.dir/state.c.obj"
   "RelationalAlgebraAnalyzer.exe"
   "RelationalAlgebraAnalyzer.exe.manifest"
   "RelationalAlgebraAnalyzer.lib"

@@ -17,6 +17,18 @@ lexer.h
 C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/lexer.h
 SLR.h
 C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/SLR.h
+rule.h
+C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/rule.h
 
 C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/lexer.h
+
+C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/rule.c
+string.h
+-
+stdlib.h
+-
+rule.h
+C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/rule.h
+
+C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/rule.h
 

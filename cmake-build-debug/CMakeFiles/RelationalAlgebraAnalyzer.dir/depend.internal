@@ -5,5 +5,9 @@ CMakeFiles/RelationalAlgebraAnalyzer.dir/analyzer.c.obj
  C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/SLR.h
  C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/analyzer.c
  C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/lexer.h
+ C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/rule.h
 CMakeFiles/RelationalAlgebraAnalyzer.dir/lexer.c.obj
  C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/lexer.c
+CMakeFiles/RelationalAlgebraAnalyzer.dir/rule.c.obj
+ C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/rule.c
+ C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/rule.h

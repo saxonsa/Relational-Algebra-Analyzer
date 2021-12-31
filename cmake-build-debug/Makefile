@@ -118,6 +118,30 @@ RelationalAlgebraAnalyzer\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\RelationalAlgebraAnalyzer.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\RelationalAlgebraAnalyzer.dir\build
 .PHONY : RelationalAlgebraAnalyzer\fast
 
+SLR.obj: SLR.c.obj
+.PHONY : SLR.obj
+
+# target to build an object file
+SLR.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RelationalAlgebraAnalyzer.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\RelationalAlgebraAnalyzer.dir\SLR.c.obj
+.PHONY : SLR.c.obj
+
+SLR.i: SLR.c.i
+.PHONY : SLR.i
+
+# target to preprocess a source file
+SLR.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RelationalAlgebraAnalyzer.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\RelationalAlgebraAnalyzer.dir\SLR.c.i
+.PHONY : SLR.c.i
+
+SLR.s: SLR.c.s
+.PHONY : SLR.s
+
+# target to generate assembly for a file
+SLR.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RelationalAlgebraAnalyzer.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\RelationalAlgebraAnalyzer.dir\SLR.c.s
+.PHONY : SLR.c.s
+
 analyzer.obj: analyzer.c.obj
 .PHONY : analyzer.obj
 
@@ -190,6 +214,30 @@ rule.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\RelationalAlgebraAnalyzer.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\RelationalAlgebraAnalyzer.dir\rule.c.s
 .PHONY : rule.c.s
 
+state.obj: state.c.obj
+.PHONY : state.obj
+
+# target to build an object file
+state.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RelationalAlgebraAnalyzer.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\RelationalAlgebraAnalyzer.dir\state.c.obj
+.PHONY : state.c.obj
+
+state.i: state.c.i
+.PHONY : state.i
+
+# target to preprocess a source file
+state.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RelationalAlgebraAnalyzer.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\RelationalAlgebraAnalyzer.dir\state.c.i
+.PHONY : state.c.i
+
+state.s: state.c.s
+.PHONY : state.s
+
+# target to generate assembly for a file
+state.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RelationalAlgebraAnalyzer.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\RelationalAlgebraAnalyzer.dir\state.c.s
+.PHONY : state.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -199,6 +247,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... RelationalAlgebraAnalyzer
+	@echo ... SLR.obj
+	@echo ... SLR.i
+	@echo ... SLR.s
 	@echo ... analyzer.obj
 	@echo ... analyzer.i
 	@echo ... analyzer.s
@@ -208,6 +259,9 @@ help:
 	@echo ... rule.obj
 	@echo ... rule.i
 	@echo ... rule.s
+	@echo ... state.obj
+	@echo ... state.i
+	@echo ... state.s
 .PHONY : help
 
 

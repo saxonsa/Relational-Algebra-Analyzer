@@ -8,9 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/SLR.c" "C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/cmake-build-debug/CMakeFiles/RelationalAlgebraAnalyzer.dir/SLR.c.obj"
   "C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/analyzer.c" "C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/cmake-build-debug/CMakeFiles/RelationalAlgebraAnalyzer.dir/analyzer.c.obj"
   "C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/lexer.c" "C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/cmake-build-debug/CMakeFiles/RelationalAlgebraAnalyzer.dir/lexer.c.obj"
   "C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/rule.c" "C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/cmake-build-debug/CMakeFiles/RelationalAlgebraAnalyzer.dir/rule.c.obj"
+  "C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/state.c" "C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/cmake-build-debug/CMakeFiles/RelationalAlgebraAnalyzer.dir/state.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "MSVC")
 

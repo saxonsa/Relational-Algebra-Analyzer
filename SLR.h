@@ -8,6 +8,8 @@
 #ifndef SLR_H
 #define SLR_H
 
+int ConvertTokenToIndex(char* token);
+
 const char* ACTION[25][10] = {
         {"", "s4", "", "s2", "", "", "s5", "", "", ""},
         {"acc", "", "", "", "s6", "", "", "", "", ""},

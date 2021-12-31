@@ -10,7 +10,10 @@
 
 typedef struct {
     char left;
-    char *right[10];
+    char right[10][10];
+    int length;
 } Rule;
+
+Rule *InitProductionRule();
 
 #endif
