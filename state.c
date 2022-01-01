@@ -20,7 +20,7 @@ int CreateStack(StateStack* stack, int size) {
     return 1;
 }
 
-int IsEmpty(StateStack *stack) {
+int IsEmpty(StateStack* stack) {
     if (stack->top == -1) {
         return 1;
     }
@@ -29,7 +29,10 @@ int IsEmpty(StateStack *stack) {
     }
 }
 
-int IsFull(StateStack *stack) {
+/*
+ * IsFull Function: Check whether the StateStack is full or not
+ */
+int IsFull(StateStack* stack) {
     if (stack->top == stack->size) {
         return 1; // full
     }
@@ -38,18 +41,28 @@ int IsFull(StateStack *stack) {
     }
 }
 
-int Push(StateStack *stack, char* token, int state) {
+/*
+ * Push function: Push pair(token, state) into the StateStack
+ */
+int Push(StateStack* stack, char* token, int state) {
     if (IsFull(stack)) {
         return 0;
     }
-    Pair pair;
-    strcpy_s(pair.token, strlen(token) + 1, token);
-    pair.state = state;
-    stack->pairs[++(stack->top)] = pair;
+    Pair *pair;
+    pair = (Pair*)malloc(sizeof(Pair));
+    if (token == NULL) {
+        pair->token = NULL;
+    }
+    else {
+        strcpy_s(pair->token, strlen(token) + 1, token);
+    }
+    pair->state = state;
+    stack->pairs[++(stack->top)] = *pair;
+    free(pair);
     return 1;
 }
 
-int Pop(StateStack *stack, Pair *pair) {
+int Pop(StateStack* stack, Pair* pair) {
     if (IsEmpty(stack)) {
         return 0;
     }
