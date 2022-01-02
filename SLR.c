@@ -6,6 +6,7 @@
 // ******************************************
 
 #include <string.h>
+#include <stdlib.h>
 
 int ConvertTokenToIndex(char* token) {
     if (strncmp(token, "$", 1) == 0) {
@@ -38,4 +39,40 @@ int ConvertTokenToIndex(char* token) {
     if (strncmp(token, "<", 1) == 0) {
         return 9;
     }
+}
+
+int ConvertNonterminalToIndex(char NonTerminal) {
+    switch (NonTerminal) {
+        case 'E': {
+            return 0;
+        }
+        case 'T': {
+            return 1;
+        }
+        case 'P': {
+            return 2;
+        }
+        case 'Q': {
+            return 3;
+        }
+        case 'R': {
+            return 4;
+        }
+        case 'N': {
+            return 5;
+        }
+        default: {
+            // never come here
+            return -1;
+        }
+    }
+}
+
+int GetStateFromActionString(char* action) {
+    char state[3] = {0};
+
+    // check how many digits in action
+    strcpy_s(state, 3, action + 1);
+
+    return atoi(state);
 }

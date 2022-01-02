@@ -281,43 +281,11 @@ char* next_token(char** p)
         {
             case 1:
             {
-                // eliminate ""
-                char* new_token = (char*)malloc(sizeof(char) * (*p - buf - 1));
-                memset(new_token, '\0', sizeof(char) * (*p - buf - 1));
-                for (int i = 0; i < (*p - buf - 2); i++)
-                {
-                    new_token[i] = token[1 + i];
-                }
-
-                // concat result identifier<token>
-                char* result = (char*)calloc(strlen("identifier<>") + 1 + (*p - buf - 1), sizeof(char));
-                strcpy_s(result, strlen("identifier<") + 1, "identifier<");
-                strcat_s(result, strlen(new_token) + 1 + strlen(result), new_token);
-                strcat_s(result, strlen(">") + 1 + strlen(result), ">");
-
-                free(token);
-                free(new_token);
-                return result;
+                return "id";
             }
             case 2:
             {
-                // eliminate ''
-                char* new_token = (char*)malloc(sizeof(char) * (*p - buf - 1));
-                memset(new_token, '\0', sizeof(char) * (*p - buf - 1));
-                for (int i = 0; i < (*p - buf - 2); i++)
-                {
-                    new_token[i] = token[1 + i];
-                }
-
-                // concat result text_literial<token>
-                char* result = (char*)calloc(strlen("text_literial<>") + 1 + (*p - buf - 1), sizeof(char));
-                strcpy_s(result, strlen("text_literial<") + 1, "text_literial<");
-                strcat_s(result, strlen(new_token) + 1 + strlen(result), new_token);
-                strcat_s(result, strlen(">") + 1 + strlen(result), ">");
-
-                free(token);
-                free(new_token);
-                return result;
+                return "text";
             }
             default:
             {

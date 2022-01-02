@@ -9,6 +9,8 @@
 #define SLR_H
 
 int ConvertTokenToIndex(char* token);
+int ConvertNonterminalToIndex(char NonTerminal);
+int GetStateFromActionString(char* action);
 
 const char* ACTION[25][10] = {
         {"", "s4", "", "s2", "", "", "s5", "", "", ""},

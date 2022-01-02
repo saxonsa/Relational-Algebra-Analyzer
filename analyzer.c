@@ -17,6 +17,11 @@
 
 #define MAXSIZE 1024 // max size for one line
 
+enum error {
+    LEXICAL_ERROR = 1,
+    SYNTAX_ERROR = 2
+};
+
 int main() {
     char ERROR_FLAG[] = "Lexical error.";
     FILE* in, * out;
@@ -37,90 +42,131 @@ int main() {
     }
 
     // initialize production rule
-    Rule *rule = InitProductionRule();
+    Rule* rules = InitProductionRule();
 
-    // processing the lexical analysis
     while (!feof(in)) {
-//        int error = 0;
+        fputs("---------------\n", out);
 
-        // read one line from "in.txt"
-        fgets(buf, MAXSIZE, in);
+        int error = 0; // mark whether we meet error (both lexical and syntax) or not
 
-        // init a pointer points the first unprocessed symbol of current line
+        fgets(buf, MAXSIZE, in); // read one line from "in.txt"
+
+        // add an artificial $ before line break (aka. '\n')
+        buf[strlen(buf) - 1] = '$';
+        buf[strlen(buf)] = '\n';
+
+        // init a pointer used for lexical analysis points the first unprocessed symbol of current line
         // initially, points to the first symbol of current line
         char* p = buf;
 
-//        char result[MAXSIZE] = { "" };
+        //        char result[MAXSIZE] = { "" };
 
-        // initialize current state, start with 0 ..... <0..   >
+        // initialize current state, start with 0
         int currentState = 0;
+
+        // create a stack for state
         StateStack stack;
         CreateStack(&stack, 20);
         Push(&stack, NULL, 0);
 
-        while (*p != '\n' && *p != '\0') { // stop when meet line ends or file ends
-            currentState = stack.pairs[stack.top].state;
-            char* token = next_token(&p);
-            int index = ConvertTokenToIndex(token);
-            char *act = (char*) malloc(sizeof(char) * 5);
-            strcpy_s(act, strlen(ACTION[currentState][index]) + 1, ACTION[currentState][index]);
-            if (strncmp(act, "s", 1) == 0) {
-                // shift
-                printf("shift");
-            }
-            else if (strncmp(act, "r", 1) == 0) {
-                // reduce
+        // print the initial case
+        printf("initial\n");
+        printf("<%d %s >\n", currentState, buf);
+
+        while (*p != '\n' && *p != '\0') { // stop when meet line break or file ends
+            char* token = "";
+            if (*p == '$' && *(p + 1) == '\n') { // valid artificial $
+                token = "$";
+                p++;
             }
             else {
-                // accept
+                token = next_token(&p);
             }
 
+            if (strcmp(token, ERROR_FLAG) == 0) {
+                error = LEXICAL_ERROR;
+                break;
+            }
+6
+            // get the index for looking up SLR action table
+            currentState = stack.pairs[stack.top].state;
+            int index = ConvertTokenToIndex(token);
 
+            // look up SLR action table and assign the operation into act variable
+            char* act = (char*)malloc(sizeof(char) * 4);
+            strcpy_s(act, strlen(ACTION[currentState][index]) + 1, ACTION[currentState][index]);
+
+            if (strncmp(act, "s", 1) == 0) { // shift
+                // push pair (token, state) to StateStack
+                Push(&stack, token, GetStateFromActionString(act));
+                continue;
+            }
+            else if (strncmp(act, "r", 1) == 0) { // reduce
+
+                while (strncmp(act, "r", 1) == 0) { // continue to reduce if we meet 'r' again
+                    // stack.pop "rule.length" times
+                    Rule rule = rules[GetStateFromActionString(act) - 1];
+                    for (int i = 0; i < rule.length; i++) {
+                        Pop(&stack, NULL);
+                    }
+
+                    // currentState = GOTO[stack.top->state, convertNonterminalToindex(rule.left)]
+                    currentState = GOTO[stack.pairs[stack.top].state][ConvertNonterminalToIndex(rule.left)];
+
+                    // push pair(rule.left, currentState])
+                    char left[2] = { 0 };
+                    left[0] = rule.left;
+                    Push(&stack, left, currentState);
+
+                    strcpy_s(act, strlen(ACTION[currentState][index]) + 1, ACTION[currentState][index]);
+                }
+
+                if (strncmp(act, "s", 1) == 0) { // shift
+                    Push(&stack, token, GetStateFromActionString(act));
+                }
+
+                else { // accept
+
+                }
+            }
+            else {
+                // acc: never come here
+            }
 
             free(act);
-            // currentState = stack->top.state
-            // act = Action [currentState, token]
-            // if act.op == 's' continue;
 
-            // if act.op == 'r'
-            // stack.pop | rule
-            // GOTO[]
-
-            // if act.op == 'a'
-            // accept
-
-//
-//            if (strcmp(token, ERROR_FLAG) != 0) {
-//                if (strlen(result) == 0) {
-//                    strcpy_s(result, strlen(token) + 1, token);
-//                }
-//                else {
-//                    // if not the first token, add an extra space before the next read token
-//                    strcat_s(result, strlen(result) + 1 + strlen(" "), " ");
-//
-//                    // concat the token name into the whole transformed result
-//                    strcat_s(result, strlen(result) + 1 + strlen(token), token);
-//                }
-//            }
-//            else {
-//                // error
-//                error = 1;
-//                break;
-//            }
+            //
+            //            if (strcmp(token, ERROR_FLAG) != 0) {
+            //                if (strlen(result) == 0) {
+            //                    strcpy_s(result, strlen(token) + 1, token);
+            //                }
+            //                else {
+            //                    // if not the first token, add an extra space before the next read token
+            //                    strcat_s(result, strlen(result) + 1 + strlen(" "), " ");
+            //
+            //                    // concat the token name into the whole transformed result
+            //                    strcat_s(result, strlen(result) + 1 + strlen(token), token);
+            //                }
+            //            }
+            //            else {
+            //                // error
+            //                error = 1;
+            //                break;
+            //            }
         }
 
-//        if (!error) {
-//            // output the transformed token name for the whole expression to "out.txt"
-//            fputs(result, out);
-//        }
-//        else {
-//            // if meet lexical error, just output the lexical error for the whole expression
-//            fputs(ERROR_FLAG, out);
-//        }
+        //        if (!error) {
+        //            // output the transformed token name for the whole expression to "out.txt"
+        //            fputs(result, out);
+        //        }
+        //        else {
+        //            // if meet lexical error, just output the lexical error for the whole expression
+        //            fputs(ERROR_FLAG, out);
+        //        }
 
-        // output a '\n' to out.txt after each line except the last line
+        // output "------------" to out.txt after finishing each line except the last line
         if (*p != '\0') {
-            fputs("\n", out);
+            fputs("---------------\n", out);
         }
     }
 

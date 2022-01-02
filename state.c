@@ -48,17 +48,15 @@ int Push(StateStack* stack, char* token, int state) {
     if (IsFull(stack)) {
         return 0;
     }
-    Pair *pair;
-    pair = (Pair*)malloc(sizeof(Pair));
+    Pair pair = {0};
     if (token == NULL) {
-        pair->token = NULL;
+        pair.token = NULL;
     }
     else {
-        strcpy_s(pair->token, strlen(token) + 1, token);
+        pair.token = token;
     }
-    pair->state = state;
-    stack->pairs[++(stack->top)] = *pair;
-    free(pair);
+    pair.state = state;
+    stack->pairs[++(stack->top)] = pair;
     return 1;
 }
 
@@ -66,7 +64,9 @@ int Pop(StateStack* stack, Pair* pair) {
     if (IsEmpty(stack)) {
         return 0;
     }
-    *pair = stack->pairs[stack->top];
+    if (pair != NULL) {
+        *pair = stack->pairs[stack->top];
+    }
     (stack->top)--;
     return 1;
 }
