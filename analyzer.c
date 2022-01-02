@@ -1,8 +1,8 @@
 // ******************************************
 // Author: UIC COMP3173 - Group 11
 // Created Date: 2021/10/28
+// Last Modified Date: 2022/01/03
 // File: Analyzer.c
-// Description: Used to run main function
 // ******************************************
 
 #define _CRT_SECURE_NO_WARNINGS // lazy to use "_s" for every function -_-
@@ -45,15 +45,23 @@ int main() {
     Rule* rules = InitProductionRule();
 
     while (!feof(in)) {
+        // read one line from "in.txt"
+        if (fgets(buf, MAXSIZE, in) == NULL) {
+            break;
+        };
+
         fputs("---------------\n", out);
 
         int error = 0; // mark whether we meet error (both lexical and syntax) or not
 
-        fgets(buf, MAXSIZE, in); // read one line from "in.txt"
-
         // add an artificial $ before line break (aka. '\n')
-        buf[strlen(buf) - 1] = '$';
-        buf[strlen(buf)] = '\n';
+        if (buf[strlen(buf) - 1] == '\n') {
+            buf[strlen(buf) - 1] = '$';
+        }
+        else {
+            buf[strlen(buf)] = '$';
+        }
+
 
         // init a pointer used for lexical analysis points the first unprocessed symbol of current line
         // initially, points to the first symbol of current line
@@ -70,24 +78,27 @@ int main() {
         Push(&stack, NULL, 0);
 
         // print the initial case
-        printf("initial\n");
-        printf("<%d %s >\n", currentState, buf);
+        fputs("initial\n", out);
+        fprintf(out, "\t<%d %s >\n", currentState, p);
 
-        while (*p != '\n' && *p != '\0') { // stop when meet line break or file ends
-            char* token = "";
-            if (*p == '$' && *(p + 1) == '\n') { // valid artificial $
+        while (*p) { // stop when meet line break or file ends
+            int a = 0;
+            int* moveTimes = &a;
+
+            char* token;
+            if (*p == '$') { // valid artificial $
                 token = "$";
-                p++;
             }
             else {
-                token = next_token(&p);
+                token = next_token(&p, moveTimes);
+                p = p - *moveTimes;
             }
 
             if (strcmp(token, ERROR_FLAG) == 0) {
                 error = LEXICAL_ERROR;
                 break;
             }
-6
+
             // get the index for looking up SLR action table
             currentState = stack.pairs[stack.top].state;
             int index = ConvertTokenToIndex(token);
@@ -95,38 +106,90 @@ int main() {
             // look up SLR action table and assign the operation into act variable
             char* act = (char*)malloc(sizeof(char) * 4);
             strcpy_s(act, strlen(ACTION[currentState][index]) + 1, ACTION[currentState][index]);
+            if (!(*act)) {
+                error = SYNTAX_ERROR;
+                break;
+            }
 
             if (strncmp(act, "s", 1) == 0) { // shift
+                fputs("shift\n", out);
+                p += *moveTimes;
+
                 // push pair (token, state) to StateStack
                 Push(&stack, token, GetStateFromActionString(act));
+
+                // print shift result
+                fputs("\t<0", out);
+                for (int i = 1; i <= stack.top; i++) {
+                    fprintf(out, " %s%d", stack.pairs[i].token, stack.pairs[i].state);
+                }
+                fprintf(out, " %s >\n", p);
+
                 continue;
             }
             else if (strncmp(act, "r", 1) == 0) { // reduce
 
                 while (strncmp(act, "r", 1) == 0) { // continue to reduce if we meet 'r' again
+
+
                     // stack.pop "rule.length" times
                     Rule rule = rules[GetStateFromActionString(act) - 1];
+
+                    // print "reduce<Rule>\n"
+                    fprintf(out, "reduce %c->", rule.left);
                     for (int i = 0; i < rule.length; i++) {
+                        fprintf(out, "%s", rule.right[i]);
+                    }
+                    fputs("\n", out);
+
+                    for (int j = 0; j < rule.length; j++) {
                         Pop(&stack, NULL);
                     }
 
                     // currentState = GOTO[stack.top->state, convertNonterminalToindex(rule.left)]
                     currentState = GOTO[stack.pairs[stack.top].state][ConvertNonterminalToIndex(rule.left)];
+                    if (currentState == -1) {
+                        fputs("syntax error\n", out);
+                    }
 
                     // push pair(rule.left, currentState])
-                    char left[2] = { 0 };
+                    char* left = (char*)malloc(sizeof(char) * 2);
                     left[0] = rule.left;
+                    left[1] = '\0';
                     Push(&stack, left, currentState);
 
+                    // print shift result
+                    fputs("\t<0", out);
+                    for (int i = 1; i <= stack.top; i++) {
+                        fprintf(out, " %s%d", stack.pairs[i].token, stack.pairs[i].state);
+                    }
+                    fprintf(out, " %s >\n", p);
+
                     strcpy_s(act, strlen(ACTION[currentState][index]) + 1, ACTION[currentState][index]);
+
+                    if (!(*act)) {
+                        error = SYNTAX_ERROR;
+                        break;
+                    }
+
                 }
 
                 if (strncmp(act, "s", 1) == 0) { // shift
+                    fputs("shift\n", out);
+                    p += *moveTimes;
+
                     Push(&stack, token, GetStateFromActionString(act));
+
+                    // print shift result
+                    fputs("\t<0", out);
+                    for (int i = 1; i <= stack.top; i++) {
+                        fprintf(out, " %s%d", stack.pairs[i].token, stack.pairs[i].state);
+                    }
+                    fprintf(out, " %s >\n", p);
                 }
 
                 else { // accept
-
+                    fputs("accept\n", out);
                 }
             }
             else {
@@ -135,39 +198,27 @@ int main() {
 
             free(act);
 
-            //
-            //            if (strcmp(token, ERROR_FLAG) != 0) {
-            //                if (strlen(result) == 0) {
-            //                    strcpy_s(result, strlen(token) + 1, token);
-            //                }
-            //                else {
-            //                    // if not the first token, add an extra space before the next read token
-            //                    strcat_s(result, strlen(result) + 1 + strlen(" "), " ");
-            //
-            //                    // concat the token name into the whole transformed result
-            //                    strcat_s(result, strlen(result) + 1 + strlen(token), token);
-            //                }
-            //            }
-            //            else {
-            //                // error
-            //                error = 1;
-            //                break;
-            //            }
+            // when finishing print $ related stack info, global move p to the next position
+            if (strncmp(token, "$", 1) == 0) {
+                p++;
+            }
         }
 
-        //        if (!error) {
-        //            // output the transformed token name for the whole expression to "out.txt"
-        //            fputs(result, out);
-        //        }
-        //        else {
-        //            // if meet lexical error, just output the lexical error for the whole expression
-        //            fputs(ERROR_FLAG, out);
-        //        }
-
-        // output "------------" to out.txt after finishing each line except the last line
-        if (*p != '\0') {
-            fputs("---------------\n", out);
+        // print error if encounter
+        switch (error) {
+            case LEXICAL_ERROR: {
+                fputs("lexical error\n", out);
+                break;
+            }
+            case SYNTAX_ERROR: {
+                fputs("syntax error\n", out);
+            }
+            default: {
+                // 0
+            }
         }
+
+        memset(buf, 0, sizeof(buf));
     }
 
     // close "in.txt" and "out.txt"

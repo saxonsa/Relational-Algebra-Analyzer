@@ -1,2 +1,44 @@
-
-
+---------------
+initial
+	<0 sig_"name"<'David'"students"$ >
+shift
+	<0 sig2 _"name"<'David'"students"$ >
+shift
+	<0 sig2 _7 "name"<'David'"students"$ >
+shift
+	<0 sig2 _7 id15 <'David'"students"$ >
+reduce N->id
+	<0 sig2 _7 N14 <'David'"students"$ >
+shift
+	<0 sig2 _7 N14 <21 'David'"students"$ >
+shift
+	<0 sig2 _7 N14 <21 text16 "students"$ >
+reduce N->text
+	<0 sig2 _7 N14 <21 N24 "students"$ >
+reduce R->N<N
+	<0 sig2 _7 R12 "students"$ >
+reduce Q->R
+	<0 sig2 _7 Q11 "students"$ >
+reduce P->Q
+	<0 sig2 _7 P10 "students"$ >
+shift
+	<0 sig2 _7 P10 id4 $ >
+reduce T->id
+	<0 sig2 _7 P10 T18 $ >
+reduce E->sig_PT
+	<0 E1 $ >
+accept
+---------------
+initial
+	<0 sig_'Goliath'$ >
+shift
+	<0 sig2 _'Goliath'$ >
+shift
+	<0 sig2 _7 'Goliath'$ >
+shift
+	<0 sig2 _7 text16 $ >
+syntax error
+---------------
+initial
+	<0 xxxx$ >
+lexical error

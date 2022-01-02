@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/SLR.c
-string.h
--
-
 C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/SLR.h
 
 C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/analyzer.c
@@ -31,14 +27,6 @@ C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/state.h
 C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/lexer.h
 
 C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/rule.h
-
-C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/state.c
-stdlib.h
--
-string.h
--
-state.h
-C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/state.h
 
 C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/state.h
 

@@ -35,13 +35,15 @@ const int transition_table[21][34] = {
         {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 5, -1, -1, -1, -1, -1, -1, -1, -1} };
 
 
-char* next_token(char** p)
+char* next_token(char** p, int *moveTimes)
 {
     // save a copy version of input string for p
     const char* buf = *p;
 
     // Denote current state, the initial state of DFA is 0
     int current_state = 0;
+
+    *moveTimes = 0;
 
     while (**p != '\n' && **p != 0 && current_state != -1 && (current_state == 0 || current_state > 9))
     {
@@ -260,6 +262,7 @@ char* next_token(char** p)
         }
         // globally move the pointer to the next unprocessed symbol
         (*p)++;
+        *moveTimes = *moveTimes + 1;
     }
 
     if (current_state == -1 || current_state > 9)

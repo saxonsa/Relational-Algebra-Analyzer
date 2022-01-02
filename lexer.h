@@ -15,6 +15,6 @@
  * @return: first token name or error
  * */
 
-char* next_token(char** p);
+char* next_token(char** , int*);
 
 #endif //RAA_LEXER_H
