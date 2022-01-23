@@ -42,10 +42,10 @@ RM = "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer
+CMAKE_SOURCE_DIR = C:\Users\Administrator\Desktop\relational-algebra-analyzer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\Administrator\Desktop\relational-algebra-analyzer\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles\RelationalAlgebraAnalyzer.dir\depend.make
@@ -57,97 +57,97 @@ include CMakeFiles\RelationalAlgebraAnalyzer.dir\flags.make
 
 CMakeFiles\RelationalAlgebraAnalyzer.dir\analyzer.c.obj: CMakeFiles\RelationalAlgebraAnalyzer.dir\flags.make
 CMakeFiles\RelationalAlgebraAnalyzer.dir\analyzer.c.obj: ..\analyzer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/RelationalAlgebraAnalyzer.dir/analyzer.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Administrator\Desktop\relational-algebra-analyzer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/RelationalAlgebraAnalyzer.dir/analyzer.c.obj"
 	C:\PROGRA~2\MIB055~1\2019\COMMUN~1\VC\Tools\MSVC\1429~1.300\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\RelationalAlgebraAnalyzer.dir\analyzer.c.obj /FdCMakeFiles\RelationalAlgebraAnalyzer.dir\ /FS -c C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\analyzer.c
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\RelationalAlgebraAnalyzer.dir\analyzer.c.obj /FdCMakeFiles\RelationalAlgebraAnalyzer.dir\ /FS -c C:\Users\Administrator\Desktop\relational-algebra-analyzer\analyzer.c
 <<
 
 CMakeFiles\RelationalAlgebraAnalyzer.dir\analyzer.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RelationalAlgebraAnalyzer.dir/analyzer.c.i"
 	C:\PROGRA~2\MIB055~1\2019\COMMUN~1\VC\Tools\MSVC\1429~1.300\bin\Hostx86\x86\cl.exe > CMakeFiles\RelationalAlgebraAnalyzer.dir\analyzer.c.i @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\analyzer.c
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Administrator\Desktop\relational-algebra-analyzer\analyzer.c
 <<
 
 CMakeFiles\RelationalAlgebraAnalyzer.dir\analyzer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RelationalAlgebraAnalyzer.dir/analyzer.c.s"
 	C:\PROGRA~2\MIB055~1\2019\COMMUN~1\VC\Tools\MSVC\1429~1.300\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\RelationalAlgebraAnalyzer.dir\analyzer.c.s /c C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\analyzer.c
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\RelationalAlgebraAnalyzer.dir\analyzer.c.s /c C:\Users\Administrator\Desktop\relational-algebra-analyzer\analyzer.c
 <<
 
 CMakeFiles\RelationalAlgebraAnalyzer.dir\lexer.c.obj: CMakeFiles\RelationalAlgebraAnalyzer.dir\flags.make
 CMakeFiles\RelationalAlgebraAnalyzer.dir\lexer.c.obj: ..\lexer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/RelationalAlgebraAnalyzer.dir/lexer.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Administrator\Desktop\relational-algebra-analyzer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/RelationalAlgebraAnalyzer.dir/lexer.c.obj"
 	C:\PROGRA~2\MIB055~1\2019\COMMUN~1\VC\Tools\MSVC\1429~1.300\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\RelationalAlgebraAnalyzer.dir\lexer.c.obj /FdCMakeFiles\RelationalAlgebraAnalyzer.dir\ /FS -c C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\lexer.c
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\RelationalAlgebraAnalyzer.dir\lexer.c.obj /FdCMakeFiles\RelationalAlgebraAnalyzer.dir\ /FS -c C:\Users\Administrator\Desktop\relational-algebra-analyzer\lexer.c
 <<
 
 CMakeFiles\RelationalAlgebraAnalyzer.dir\lexer.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RelationalAlgebraAnalyzer.dir/lexer.c.i"
 	C:\PROGRA~2\MIB055~1\2019\COMMUN~1\VC\Tools\MSVC\1429~1.300\bin\Hostx86\x86\cl.exe > CMakeFiles\RelationalAlgebraAnalyzer.dir\lexer.c.i @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\lexer.c
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Administrator\Desktop\relational-algebra-analyzer\lexer.c
 <<
 
 CMakeFiles\RelationalAlgebraAnalyzer.dir\lexer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RelationalAlgebraAnalyzer.dir/lexer.c.s"
 	C:\PROGRA~2\MIB055~1\2019\COMMUN~1\VC\Tools\MSVC\1429~1.300\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\RelationalAlgebraAnalyzer.dir\lexer.c.s /c C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\lexer.c
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\RelationalAlgebraAnalyzer.dir\lexer.c.s /c C:\Users\Administrator\Desktop\relational-algebra-analyzer\lexer.c
 <<
 
 CMakeFiles\RelationalAlgebraAnalyzer.dir\rule.c.obj: CMakeFiles\RelationalAlgebraAnalyzer.dir\flags.make
 CMakeFiles\RelationalAlgebraAnalyzer.dir\rule.c.obj: ..\rule.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/RelationalAlgebraAnalyzer.dir/rule.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Administrator\Desktop\relational-algebra-analyzer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/RelationalAlgebraAnalyzer.dir/rule.c.obj"
 	C:\PROGRA~2\MIB055~1\2019\COMMUN~1\VC\Tools\MSVC\1429~1.300\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\RelationalAlgebraAnalyzer.dir\rule.c.obj /FdCMakeFiles\RelationalAlgebraAnalyzer.dir\ /FS -c C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\rule.c
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\RelationalAlgebraAnalyzer.dir\rule.c.obj /FdCMakeFiles\RelationalAlgebraAnalyzer.dir\ /FS -c C:\Users\Administrator\Desktop\relational-algebra-analyzer\rule.c
 <<
 
 CMakeFiles\RelationalAlgebraAnalyzer.dir\rule.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RelationalAlgebraAnalyzer.dir/rule.c.i"
 	C:\PROGRA~2\MIB055~1\2019\COMMUN~1\VC\Tools\MSVC\1429~1.300\bin\Hostx86\x86\cl.exe > CMakeFiles\RelationalAlgebraAnalyzer.dir\rule.c.i @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\rule.c
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Administrator\Desktop\relational-algebra-analyzer\rule.c
 <<
 
 CMakeFiles\RelationalAlgebraAnalyzer.dir\rule.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RelationalAlgebraAnalyzer.dir/rule.c.s"
 	C:\PROGRA~2\MIB055~1\2019\COMMUN~1\VC\Tools\MSVC\1429~1.300\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\RelationalAlgebraAnalyzer.dir\rule.c.s /c C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\rule.c
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\RelationalAlgebraAnalyzer.dir\rule.c.s /c C:\Users\Administrator\Desktop\relational-algebra-analyzer\rule.c
 <<
 
 CMakeFiles\RelationalAlgebraAnalyzer.dir\state.c.obj: CMakeFiles\RelationalAlgebraAnalyzer.dir\flags.make
 CMakeFiles\RelationalAlgebraAnalyzer.dir\state.c.obj: ..\state.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/RelationalAlgebraAnalyzer.dir/state.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Administrator\Desktop\relational-algebra-analyzer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/RelationalAlgebraAnalyzer.dir/state.c.obj"
 	C:\PROGRA~2\MIB055~1\2019\COMMUN~1\VC\Tools\MSVC\1429~1.300\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\RelationalAlgebraAnalyzer.dir\state.c.obj /FdCMakeFiles\RelationalAlgebraAnalyzer.dir\ /FS -c C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\state.c
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\RelationalAlgebraAnalyzer.dir\state.c.obj /FdCMakeFiles\RelationalAlgebraAnalyzer.dir\ /FS -c C:\Users\Administrator\Desktop\relational-algebra-analyzer\state.c
 <<
 
 CMakeFiles\RelationalAlgebraAnalyzer.dir\state.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RelationalAlgebraAnalyzer.dir/state.c.i"
 	C:\PROGRA~2\MIB055~1\2019\COMMUN~1\VC\Tools\MSVC\1429~1.300\bin\Hostx86\x86\cl.exe > CMakeFiles\RelationalAlgebraAnalyzer.dir\state.c.i @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\state.c
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Administrator\Desktop\relational-algebra-analyzer\state.c
 <<
 
 CMakeFiles\RelationalAlgebraAnalyzer.dir\state.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RelationalAlgebraAnalyzer.dir/state.c.s"
 	C:\PROGRA~2\MIB055~1\2019\COMMUN~1\VC\Tools\MSVC\1429~1.300\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\RelationalAlgebraAnalyzer.dir\state.c.s /c C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\state.c
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\RelationalAlgebraAnalyzer.dir\state.c.s /c C:\Users\Administrator\Desktop\relational-algebra-analyzer\state.c
 <<
 
 CMakeFiles\RelationalAlgebraAnalyzer.dir\SLR.c.obj: CMakeFiles\RelationalAlgebraAnalyzer.dir\flags.make
 CMakeFiles\RelationalAlgebraAnalyzer.dir\SLR.c.obj: ..\SLR.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/RelationalAlgebraAnalyzer.dir/SLR.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Administrator\Desktop\relational-algebra-analyzer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/RelationalAlgebraAnalyzer.dir/SLR.c.obj"
 	C:\PROGRA~2\MIB055~1\2019\COMMUN~1\VC\Tools\MSVC\1429~1.300\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\RelationalAlgebraAnalyzer.dir\SLR.c.obj /FdCMakeFiles\RelationalAlgebraAnalyzer.dir\ /FS -c C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\SLR.c
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\RelationalAlgebraAnalyzer.dir\SLR.c.obj /FdCMakeFiles\RelationalAlgebraAnalyzer.dir\ /FS -c C:\Users\Administrator\Desktop\relational-algebra-analyzer\SLR.c
 <<
 
 CMakeFiles\RelationalAlgebraAnalyzer.dir\SLR.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RelationalAlgebraAnalyzer.dir/SLR.c.i"
 	C:\PROGRA~2\MIB055~1\2019\COMMUN~1\VC\Tools\MSVC\1429~1.300\bin\Hostx86\x86\cl.exe > CMakeFiles\RelationalAlgebraAnalyzer.dir\SLR.c.i @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\SLR.c
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Administrator\Desktop\relational-algebra-analyzer\SLR.c
 <<
 
 CMakeFiles\RelationalAlgebraAnalyzer.dir\SLR.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RelationalAlgebraAnalyzer.dir/SLR.c.s"
 	C:\PROGRA~2\MIB055~1\2019\COMMUN~1\VC\Tools\MSVC\1429~1.300\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\RelationalAlgebraAnalyzer.dir\SLR.c.s /c C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\SLR.c
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\RelationalAlgebraAnalyzer.dir\SLR.c.s /c C:\Users\Administrator\Desktop\relational-algebra-analyzer\SLR.c
 <<
 
 # Object files for target RelationalAlgebraAnalyzer
@@ -168,9 +168,9 @@ RelationalAlgebraAnalyzer.exe: CMakeFiles\RelationalAlgebraAnalyzer.dir\state.c.
 RelationalAlgebraAnalyzer.exe: CMakeFiles\RelationalAlgebraAnalyzer.dir\SLR.c.obj
 RelationalAlgebraAnalyzer.exe: CMakeFiles\RelationalAlgebraAnalyzer.dir\build.make
 RelationalAlgebraAnalyzer.exe: CMakeFiles\RelationalAlgebraAnalyzer.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable RelationalAlgebraAnalyzer.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Administrator\Desktop\relational-algebra-analyzer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable RelationalAlgebraAnalyzer.exe"
 	"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\RelationalAlgebraAnalyzer.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\mt.exe --manifests -- C:\PROGRA~2\MIB055~1\2019\COMMUN~1\VC\Tools\MSVC\1429~1.300\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\RelationalAlgebraAnalyzer.dir\objects1.rsp @<<
- /out:RelationalAlgebraAnalyzer.exe /implib:RelationalAlgebraAnalyzer.lib /pdb:C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\cmake-build-debug\RelationalAlgebraAnalyzer.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
+ /out:RelationalAlgebraAnalyzer.exe /implib:RelationalAlgebraAnalyzer.lib /pdb:C:\Users\Administrator\Desktop\relational-algebra-analyzer\cmake-build-debug\RelationalAlgebraAnalyzer.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<
 
 # Rule to build all files generated by this target.
@@ -182,6 +182,6 @@ CMakeFiles\RelationalAlgebraAnalyzer.dir\clean:
 .PHONY : CMakeFiles\RelationalAlgebraAnalyzer.dir\clean
 
 CMakeFiles\RelationalAlgebraAnalyzer.dir\depend:
-	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\cmake-build-debug C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\cmake-build-debug C:\Users\Administrator\Desktop\RelationalAlgebraAnalyzer\cmake-build-debug\CMakeFiles\RelationalAlgebraAnalyzer.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" C:\Users\Administrator\Desktop\relational-algebra-analyzer C:\Users\Administrator\Desktop\relational-algebra-analyzer C:\Users\Administrator\Desktop\relational-algebra-analyzer\cmake-build-debug C:\Users\Administrator\Desktop\relational-algebra-analyzer\cmake-build-debug C:\Users\Administrator\Desktop\relational-algebra-analyzer\cmake-build-debug\CMakeFiles\RelationalAlgebraAnalyzer.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles\RelationalAlgebraAnalyzer.dir\depend
 

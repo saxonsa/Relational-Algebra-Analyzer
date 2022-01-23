@@ -6,9 +6,15 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/SLR.h
+C:/Users/Administrator/Desktop/relational-algebra-analyzer/SLR.c
+string.h
+-
+stdlib.h
+-
 
-C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/analyzer.c
+C:/Users/Administrator/Desktop/relational-algebra-analyzer/SLR.h
+
+C:/Users/Administrator/Desktop/relational-algebra-analyzer/analyzer.c
 stdio.h
 -
 string.h
@@ -16,17 +22,39 @@ string.h
 stdlib.h
 -
 lexer.h
-C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/lexer.h
+C:/Users/Administrator/Desktop/relational-algebra-analyzer/lexer.h
 SLR.h
-C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/SLR.h
+C:/Users/Administrator/Desktop/relational-algebra-analyzer/SLR.h
 rule.h
-C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/rule.h
+C:/Users/Administrator/Desktop/relational-algebra-analyzer/rule.h
 state.h
-C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/state.h
+C:/Users/Administrator/Desktop/relational-algebra-analyzer/state.h
 
-C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/lexer.h
+C:/Users/Administrator/Desktop/relational-algebra-analyzer/lexer.c
+string.h
+-
+stdlib.h
+-
 
-C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/rule.h
+C:/Users/Administrator/Desktop/relational-algebra-analyzer/lexer.h
 
-C:/Users/Administrator/Desktop/RelationalAlgebraAnalyzer/state.h
+C:/Users/Administrator/Desktop/relational-algebra-analyzer/rule.c
+string.h
+-
+stdlib.h
+-
+rule.h
+C:/Users/Administrator/Desktop/relational-algebra-analyzer/rule.h
+
+C:/Users/Administrator/Desktop/relational-algebra-analyzer/rule.h
+
+C:/Users/Administrator/Desktop/relational-algebra-analyzer/state.c
+stdlib.h
+-
+string.h
+-
+state.h
+C:/Users/Administrator/Desktop/relational-algebra-analyzer/state.h
+
+C:/Users/Administrator/Desktop/relational-algebra-analyzer/state.h
 
