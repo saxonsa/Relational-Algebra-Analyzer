@@ -8,5 +8,11 @@
 
 
 #### Introduction
-Lexical analysis for Relational Algebra analyzer used in database
+Lexical and Syntax analysis for Relational Algebra analyzer used in database
+
+#### Usage
+Check in.txt and out.txt to get more insights
+
+#### Contact
+If you have any problem, contact saxonsa5683@163.com
 
